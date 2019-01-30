@@ -1,11 +1,7 @@
 pptp:
-  image: vimagick/pptp
-  environment:
-    - SERVER=192.168.31.222
-    - TUNNEL=vps
-    - USERNAME=username
-    - PASSWORD=password
-    - ROUTES=0.0.0.0/1 128.0.0.0/1
+  image: aekrylov/pptp 
+  env_file: .env
   net: host
   privileged: yes
   restart: unless-stopped
+
